@@ -1174,7 +1174,7 @@ a:hover {
 }
 
 .side-slider .slider .swiper-slide img {
-    width: 700px;
+    width: 100%;
     float: left;
     height: 500px;
 }
