@@ -1174,7 +1174,7 @@ a:hover {
 }
 
 .side-slider .slider .swiper-slide img {
-    width: 700px;
+    width: 100%;
     float: left;
     height: 500px;
 }
@@ -2958,7 +2958,7 @@ a:hover {
 }
 
 .footer .logo a img {
-    /* height: 48px; */
+    height: 48px; 
     display: inline-block;
 }
 
@@ -3268,4 +3268,138 @@ only screen and (max-device-width: 767px) {
     border-radius: 20px;
     border: 3px solid #009a4e;
   }
+  /*own css */
+  @font-face {
+    font-family: myriadatFont;
+    src: url(https://cdn.shopify.com/s/files/1/0464/8842/0507/files/MYRIADAT.TTF?v=1602119518);
+  }
   
+  .swiper-container {
+    width: 100%;
+  }
+  
+  .swiper-slide {
+  /*   Center slide text vertically */
+    background-color: #e6e6e6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img{
+    background-color: #e6e6e6;
+    width: 100%;
+    height: auto;
+  }
+  
+  .btn-cart{
+    position: absolute;
+    bottom: 20%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: myriadatFont;
+    font-weight: normal;
+    letter-spacing: 2.5px;
+    border: 1px solid #33331a;
+    background-color: white;
+    color: #3d3d29;
+    text-decoration: none;
+    width: 250px;
+    height: 48px;
+    margin: 8px 0;
+    transition: all 0.4s;
+    z-index: 3;
+    opacity: 0;
+  }
+  
+  .swiper-slide:hover .btn-cart{
+    opacity: 1;
+  }
+  
+  
+  /* Custom previous and next button using icons*/
+  .swiper-button-prev {
+    background-image: url('https://www.flaticon.com/premium-icon/icons/svg/3545/3545745.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: cover;
+  }
+  
+  .swiper-button-prev::after {
+    display: none;
+  }
+  
+  .swiper-button-next {
+    background-image: url('https://www.flaticon.com/premium-icon/icons/svg/3545/3545748.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: cover;
+  }
+  
+  .swiper-button-next::after {
+    display: none;
+  }
+  
+  
+  /* For tablets: */
+  
+  
+  /**
+    *  I had to use max-width: 980px because it was triggering on     * the wrong size (other than the slidesPerView)
+    * Need to correct this.
+  ***/
+  @media only screen and (max-width: 980px) {
+    .btn-cart{
+      position: relative;
+      font-family: myriadatFont;
+      font-weight: normal;
+      letter-spacing: 2.5px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border: 1px solid #33331a;
+      background-color: white;
+      color: #3d3d29;
+      text-decoration: none;
+      width: 250px;
+      height: 48px;
+      margin: 8px 0;
+      transition: all 0.4s;
+      z-index: 3;
+      opacity: 1;
+    }
+  }
+  
+  /* For mobile phones: */ 
+  @media only screen and (max-width: 500px){
+    .btn-cart{
+      position: relative;
+      font-family: myriadatFont;
+      font-weight: normal;
+      letter-spacing: 2.5px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border: 1px solid #33331a;
+      background-color: white;
+      color: #3d3d29;
+      text-decoration: none;
+      width: 250px;
+      height: 48px;
+      margin: 8px 0;
+      transition: all 0.4s;
+      z-index: 3;
+      opacity: 1;
+    }
+  }
